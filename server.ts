@@ -55,6 +55,105 @@ app.post("/api/sync", (req, res) => {
   }
 });
 
+// Daily Routine Management Endpoints
+interface RoutineItem {
+  id: string;
+  time: string;
+  title: string;
+  icon: string;
+  period: 'morning' | 'afternoon' | 'evening';
+  completed: boolean;
+}
+
+let inMemoryRoutines: RoutineItem[] = [
+  { id: 'r1', time: '6:30 AM', title: 'Wake up & stretch gently', icon: '🌅', period: 'morning', completed: true },
+  { id: 'r2', time: '7:00 AM', title: 'Morning medicine', icon: '💊', period: 'morning', completed: true },
+  { id: 'r3', time: '7:30 AM', title: 'Breakfast — lal saah & pitha', icon: '🍵', period: 'morning', completed: false },
+  { id: 'r4', time: '8:00 AM', title: 'Morning walk in the garden', icon: '🚶', period: 'morning', completed: false },
+  { id: 'r5', time: '9:00 AM', title: 'Cognitive activity session', icon: '🧩', period: 'morning', completed: false },
+  { id: 'r6', time: '12:30 PM', title: 'Lunch — fresh seasonal rice & herbs', icon: '🍛', period: 'afternoon', completed: false },
+  { id: 'r7', time: '2:00 PM', title: 'Afternoon rest & quiet time', icon: '😴', period: 'afternoon', completed: false },
+  { id: 'r8', time: '4:30 PM', title: 'Evening tea & family courtyard chat', icon: '☕', period: 'evening', completed: false },
+  { id: 'r9', time: '6:00 PM', title: 'Evening memory photo stroll', icon: '🎯', period: 'evening', completed: false },
+  { id: 'r10', time: '8:00 PM', title: 'Dinner & evening medication', icon: '🍽️', period: 'evening', completed: false },
+  { id: 'r11', time: '9:30 PM', title: 'Bedtime relaxation & peaceful sleep', icon: '🌙', period: 'evening', completed: false }
+];
+
+app.get("/api/routines", (_req, res) => {
+  res.json({
+    success: true,
+    message: "Routines retrieved successfully",
+    data: inMemoryRoutines
+  });
+});
+
+app.post("/api/routines", (req, res) => {
+  try {
+    const { title, time, period, icon } = req.body;
+    const newTask: RoutineItem = {
+      id: `r-${Date.now()}`,
+      title: title || 'New Routine Task',
+      time: time || '12:00 PM',
+      period: (period ? String(period).toLowerCase() : 'morning') as any,
+      icon: icon || '📋',
+      completed: false
+    };
+    inMemoryRoutines.push(newTask);
+    res.status(201).json({
+      success: true,
+      message: "Routine task created",
+      data: newTask
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.post("/api/routines/:id/complete", (req, res) => {
+  const { id } = req.params;
+  const { completed } = req.body;
+  const task = inMemoryRoutines.find(t => t.id === id);
+  if (task) {
+    task.completed = completed !== undefined ? !!completed : !task.completed;
+    res.json({
+      success: true,
+      message: "Routine completion status updated",
+      data: task
+    });
+  } else {
+    res.status(404).json({ success: false, message: "Routine task not found" });
+  }
+});
+
+app.patch("/api/routines/:id", (req, res) => {
+  const { id } = req.params;
+  const { title, time, period, icon } = req.body;
+  const task = inMemoryRoutines.find(t => t.id === id);
+  if (task) {
+    if (title) task.title = title;
+    if (time) task.time = time;
+    if (period) task.period = String(period).toLowerCase() as any;
+    if (icon) task.icon = icon;
+    res.json({
+      success: true,
+      message: "Routine task updated",
+      data: task
+    });
+  } else {
+    res.status(404).json({ success: false, message: "Routine task not found" });
+  }
+});
+
+app.delete("/api/routines/:id", (req, res) => {
+  const { id } = req.params;
+  inMemoryRoutines = inMemoryRoutines.filter(t => t.id !== id);
+  res.json({
+    success: true,
+    message: "Routine task deleted"
+  });
+});
+
+
 
 // AI Companion Chat endpoint
 app.post("/api/companion/chat", async (req, res) => {
