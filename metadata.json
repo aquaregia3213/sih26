@@ -1,0 +1,6 @@
+{
+  "name": "Vanika - AI Cognitive Care Platform",
+  "description": "AI-powered cognitive care, memory assistance, and caregiver analytics for elderly individuals in North Eastern India.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,23 @@
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
+
+// Register Service Worker for PWA Offline Caching & Background Sync
+if ('serviceWorker' in navigator && (import.meta as any).env?.PROD) {
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').then((reg) => {
+      console.log('[Vanika PWA] Service worker registered successfully:', reg.scope);
+    }).catch((err) => {
+      console.warn('[Vanika PWA] Service worker registration notice:', err);
+    });
+  });
+}
+

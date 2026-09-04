@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "মুখ্য পৃষ্ঠা",
+    "howItWorks": "কিদৰে কাম কৰে",
+    "features": "বৈশিষ্ট্যসমূহ",
+    "neRoots": "উত্তৰ-পূবৰ শিপা",
+    "caregivers": "সেৱাকৰ্মীৰ বাবে",
+    "privacy": "গোপনীয়তা",
+    "patientCourtyard": "স্মৃতি চৰা",
+    "caregiverPortal": "সেৱাকৰ্মী পৰ্টেল",
+    "talkToOja": "ওজাৰ সৈতে কথা পাতক",
+    "login": "ছাইন ইন কৰক",
+    "signup": "একাউণ্ট সৃষ্টি কৰক",
+    "logout": "লগ আউট"
+  },
+  "dashboard": {
+    "welcome": "সুপ্রভাত, {{name}}",
+    "tagline": "মনত পেলাওক। খেলক। সংযোগ কৰক।",
+    "startActivity": "কাৰ্যসূচী আৰম্ভ কৰক",
+    "todayGoal": "আজিৰ লক্ষ্য",
+    "streakDays": "{{count}} দিন ধাৰাবাহিক সক্ৰিয়তা",
+    "viewProgress": "অগ্রগতি চাওক"
+  },
+  "games": {
+    "title": "স্মৃতি কাৰ্যসূচী কেন্দ্ৰ",
+    "instructions": "ধীৰে ধীৰে নিজৰ গতিত নিৰ্দেশনা পালন কৰক।",
+    "submit": "উত্তৰ জমা দিয়ক",
+    "score": "নম্বৰ: {{score}}",
+    "accuracy": "সঠিকতা: {{accuracy}}%",
+    "nextActivity": "পৰৱৰ্তী পৰামৰ্শিত কাৰ্যসূচী"
+  },
+  "routine": {
+    "title": "দৈনিক দিনচৰ্যা",
+    "today": "আজিৰ কাৰ্যসূচী",
+    "completed": "সম্পূৰ্ণ হ'ল",
+    "markDone": "সম্পূৰ্ণ হিচাপে চিহ্ন কৰক"
+  },
+  "notifications": {
+    "title": "অধিসূচনাসমূহ",
+    "empty": "কোনো নতুন অধিসূচনা নাই",
+    "markAllRead": "সকলো পঢ়া হ'ল বুলি চিহ্ন কৰক"
+  },
+  "accessibility": {
+    "title": "সুলভতা ছেটিংছ",
+    "textSize": "আখৰৰ আকাৰ",
+    "highContrast": "উচ্চ বৈষম্য",
+    "darkMode": "ৰাতিৰ মড",
+    "lightMode": "দিনৰ মড",
+    "voiceSpeed": "কথাৰ গতি"
+  },
+  "auth": {
+    "loginTitle": "পুনৰ স্বাগতম",
+    "signupTitle": "বনিকাৰ সৈতে যোগ দিয়ক",
+    "emailLabel": "ইমেইল ঠিকনা",
+    "passwordLabel": "পাছৱৰ্ড",
+    "submitLogin": "ছাইন ইন কৰক",
+    "submitSignup": "পঞ্জীয়ন কৰক"
+  }
+}

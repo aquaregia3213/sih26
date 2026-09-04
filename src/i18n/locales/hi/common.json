@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "होम",
+    "howItWorks": "यह कैसे काम करता है",
+    "features": "विशेषताएं",
+    "neRoots": "पूर्वोत्तर की जड़ें",
+    "caregivers": "देखभालकर्ताओं के लिए",
+    "privacy": "गोपनीयता",
+    "patientCourtyard": "स्मृति प्रांगण",
+    "caregiverPortal": "केयरगिवर पोर्टल",
+    "talkToOja": "ओजा से बात करें",
+    "login": "साइन इन करें",
+    "signup": "खाता बनाएं",
+    "logout": "लॉग आउट"
+  },
+  "dashboard": {
+    "welcome": "शुभ प्रभात, {{name}}",
+    "tagline": "याद रखें। खेलें। जुड़ें।",
+    "startActivity": "गतिविधि शुरू करें",
+    "todayGoal": "आज का लक्ष्य",
+    "streakDays": "{{count}} दिन का सक्रिय सिलसिला",
+    "viewProgress": "प्रगति देखें"
+  },
+  "games": {
+    "title": "संज्ञानात्मक गतिविधि केंद्र",
+    "instructions": "अपनी गति से शांतिपूर्वक निर्देशों का पालन करें।",
+    "submit": "उत्तर जमा करें",
+    "score": "अंक: {{score}}",
+    "accuracy": "सटीकता: {{accuracy}}%",
+    "nextActivity": "अगली अनुशंसित गतिविधि"
+  },
+  "routine": {
+    "title": "दैनिक दिनचर्या",
+    "today": "आज की दिनचर्या",
+    "completed": "पूरा हुआ",
+    "markDone": "पूरा चिन्हित करें"
+  },
+  "notifications": {
+    "title": "सूचनाएं",
+    "empty": "कोई नई सूचना नहीं है",
+    "markAllRead": "सभी को पढ़ा हुआ चिन्हित करें"
+  },
+  "accessibility": {
+    "title": "पहुंच-योग्यता सेटिंग्स",
+    "textSize": "पाठ का आकार",
+    "highContrast": "उच्च विषमता",
+    "darkMode": "रात्रि मोड",
+    "lightMode": "दिवस मोड",
+    "voiceSpeed": "आवाज की गति"
+  },
+  "auth": {
+    "loginTitle": "पुनः स्वागत है",
+    "signupTitle": "वनिका से जुड़ें",
+    "emailLabel": "ईमेल पता",
+    "passwordLabel": "पासवर्ड",
+    "submitLogin": "साइन इन करें",
+    "submitSignup": "पंजीकरण करें"
+  }
+}

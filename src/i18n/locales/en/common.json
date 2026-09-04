@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "neRoots": "Northeast Roots",
+    "caregivers": "For Caregivers",
+    "privacy": "Privacy",
+    "patientCourtyard": "Patient Courtyard",
+    "caregiverPortal": "Caregiver Portal",
+    "talkToOja": "Talk to Oja",
+    "login": "Sign In",
+    "signup": "Create Account",
+    "logout": "Log Out"
+  },
+  "dashboard": {
+    "welcome": "Good morning, {{name}}",
+    "tagline": "Remember. Play. Connect.",
+    "startActivity": "Start Activity",
+    "todayGoal": "Today's Activity Goal",
+    "streakDays": "{{count}} Day Active Streak",
+    "viewProgress": "View Progress"
+  },
+  "games": {
+    "title": "Cognitive Activity Hub",
+    "instructions": "Follow the prompts gently at your own pace.",
+    "submit": "Submit Answer",
+    "score": "Score: {{score}}",
+    "accuracy": "Accuracy: {{accuracy}}%",
+    "nextActivity": "Next Recommended Activity"
+  },
+  "routine": {
+    "title": "Daily Routine Tasks",
+    "today": "Today's Routine",
+    "completed": "Completed",
+    "markDone": "Mark Done"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "No unread notifications",
+    "markAllRead": "Mark All as Read"
+  },
+  "accessibility": {
+    "title": "Accessibility Settings",
+    "textSize": "Text Size",
+    "highContrast": "High Contrast",
+    "darkMode": "Night Mode",
+    "lightMode": "Day Mode",
+    "voiceSpeed": "Voice Pace"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "signupTitle": "Join Vanika",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "submitLogin": "Sign In",
+    "submitSignup": "Register"
+  }
+}
